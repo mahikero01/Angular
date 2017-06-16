@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Ng2Datetime } from 'ng2-datetime-picker';
 
 import { AppComponent } from './app.component';
 
