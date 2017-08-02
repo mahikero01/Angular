@@ -19,8 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "assets/css/ng2-select.css",
+        "assets/css/font-awesome-4.7.0/css/font-awesome.css",
+    		"assets/css/Checkboxes.css",
         "../node_modules/bootstrap/dist/css/bootstrap.css",
-        "styles.css"
+        "assets/Css/bootstrap-3.3.7-dist/css/bootstrap-theme.css",
+    		"assets/css/Site.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
