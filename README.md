@@ -17,7 +17,24 @@ $ ng generate component NameOfNewwComponent
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 $ ng build --target=production --base-href '/'
-$ ng build --target=development --base-href '/'
+$ ng build --target=development --base-href '/' --aot --build-optimizer
+
+
+JIT - Compile TypeScript just in time for executing it.
+
+Compiled in the browser.
+Each file compiled separately.
+No need to build after changing your code and before reloading the browser page.
+Suitable for local development.
+
+
+AOT - Compile TypeScript during build phase.
+
+Compiled by the machine itself, via the command line (Faster).
+All code compiled together, inlining HTML/CSS in the scripts.
+No need to deploy the compiler (Half of Angular size).
+More secure, original source not disclosed.
+Suitable for production builds.
 
 
 ## Running unit tests
