@@ -6,10 +6,12 @@ import { AppRoute } from './app.routes';
 import { TitleModule } from './title/title.module';
 
 import { AppComponent } from './app.component';
+import { CreateTitleComponent } from './create-title/create-title.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateTitleComponent
   ],
   imports: [
     BrowserModule,
