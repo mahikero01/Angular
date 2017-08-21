@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateTitleRoutingModule } from './createtitle-routing.module';
+import { CreateTitleRoutingModule } from './createTitle-routing.module';
 
-import { CreateTitleComponent } from './createtitle.component';
+import { CreateTitleComponent } from './createTitle.component';
 
 @NgModule({
   imports: [

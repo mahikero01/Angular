@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Ng2Datetime } from 'ng2-datetime-picker';
 import { AppRoutingModule } from './app-routing.module';
 import { TitleModule } from './title/title.module';
-import { CreateTitleModule } from './createtitle/createtitle.module';
+import { CreateTitleModule } from './createtitle/createTitle.module';
 
 import { AppComponent } from './app.component';
 

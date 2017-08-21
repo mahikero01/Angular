@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreateTitleComponent } from './createtitle.component';
+import { CreateTitleComponent } from './createTitle.component';
 
 const routes: Routes = [
   { path: 'createtitle', component: CreateTitleComponent }
