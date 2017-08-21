@@ -3,15 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { TitleComponent } from './title.component';
 import { TitleDetailsComponent } from './title-details/title-details.component'
 
-const titleroutes: Routes = [
-        { path: 'title', component: TitleComponent },
-        { path: 'title/:id', component: TitleDetailsComponent }
+
+const routes: Routes = [
+    { path: 'title', component: TitleComponent },
+    { path: 'title/:id', component: TitleDetailsComponent }
+    
 ];
 
 @NgModule ({
-    imports:[ RouterModule.forChild(titleroutes) ],
+    imports:[ RouterModule.forChild(routes) ],
     exports:[ RouterModule ]
 })
 
 
-export class TitleRoutes {}
+
+export class TitleRoutingModule {}

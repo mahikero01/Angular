@@ -1,22 +1,23 @@
 import { NgModule }      from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TitleRoutes } from './title.routes';
+import { TitleRoutingModule } from './title-routing.module';
 
 import { TitleComponent } from './title.component';
 import { TitleDetailsComponent } from './title-details/title-details.component';
-import { TitleService } from '../services/title.service';
+
+import { TitlesService } from '../services/titles.service';
 
 @NgModule({
+    imports: [
+        CommonModule,
+        TitleRoutingModule
+    ],
     declarations: [
         TitleComponent,
         TitleDetailsComponent
     ],
-    imports: [
-        CommonModule,
-        TitleRoutes
-    ],
     providers: [
-        TitleService
+        TitlesService
     ],
     exports: [
         TitleComponent

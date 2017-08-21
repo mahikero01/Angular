@@ -2,7 +2,7 @@ import {
   Component, 
   OnInit 
 } from '@angular/core';
-import { TitleService } from '../services/title.service'
+import { TitlesService } from '../services/titles.service'
 
 @Component({
   selector: 'app-title',
@@ -12,11 +12,12 @@ import { TitleService } from '../services/title.service'
 export class TitleComponent implements OnInit {
   titles: any[];
 
-  constructor(private eventService: TitleService) { 
+  constructor(private eventService: TitlesService) { 
   }
 
   ngOnInit() {
     this.titles = this.eventService.getTitles();
   }
 
+  
 }

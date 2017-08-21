@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TitleService } from '../../services/title.service';
+import { TitlesService } from '../../services/titles.service';
 
 @Component({
   selector: 'app-title-details',
@@ -11,7 +11,7 @@ export class TitleDetailsComponent implements OnInit {
   DetailTitle: any;
 
   constructor(
-      private eventService: TitleService, 
+      private eventService: TitlesService, 
       private route:ActivatedRoute) { }
 
   ngOnInit() {
