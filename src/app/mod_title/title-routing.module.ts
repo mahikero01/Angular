@@ -6,6 +6,7 @@ import { RouteActivatorService } from '../com_services/route_activator.service'
 
 const routes: Routes = [
     { path: 'title', component: TitleComponent },
+    // use a service that is define in the provider
     { path: 'title/:id', component: TitleDetailsComponent,
             canActivate: [RouteActivatorService]}
 ];

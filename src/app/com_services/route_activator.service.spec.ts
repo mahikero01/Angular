@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { RouteActivatorService } from './route-activator.service';
+import { RouteActivatorService } from './route_activator.service';
 
 describe('RouteActivatorService', () => {
   beforeEach(() => {

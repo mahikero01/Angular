@@ -6,6 +6,9 @@ import {
 } from '@angular/router'
 import { TitlesService } from './titles.service';
 
+//This service make use of CanActivate fetures of Angular Router
+//if true the allows to navigate on the said route
+//if false does not allows to navigate on the said route
 @Injectable()
 export class RouteActivatorService implements CanActivate{
 
@@ -14,7 +17,6 @@ export class RouteActivatorService implements CanActivate{
       private router: Router) { 
 
   }
-
 
   canActivate(route: ActivatedRouteSnapshot){
     //'!!' casting value to boolean

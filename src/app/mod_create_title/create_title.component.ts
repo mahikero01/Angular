@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./create_title.component.css']
 })
 export class CreateTitleComponent implements OnInit {
+  isDirty: boolean = true;
   title:any;
+
   constructor(
       private router: Router) { 
-
   }
 
   cancelClick() {

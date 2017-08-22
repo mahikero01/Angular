@@ -12,9 +12,23 @@ import { CreateTitleComponent } from './create_title.component';
   declarations: [
     CreateTitleComponent
   ],
-  providers:[],
+  providers:[
+    //long hand form
+    {
+      provide:'canDeactivateCreateTitle',
+      useValue: checkDirtyState
+    }
+  ],
   exports: [
-    CreateTitleComponent
+    CreateTitleComponent 
   ]
 })
 export class CreateTitleModule { }
+
+  function checkDirtyState(component:CreateTitleComponent) {
+    if (component.isDirty)
+      return window.confirm('Info not save, are you sure you want to cancell?');
+
+    return true;
+  }
+
