@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CreateTitleComponent } from './createTitle.component';
+
+import { I404Component } from './smd_i404/i404.component'
 
 const routes: Routes = [
-  { path: 'createtitle', component: CreateTitleComponent }
+  { path: '404', component: I404Component }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-
-export class CreateTitleRoutingModule { }
+export class InfoRoutingModule { }

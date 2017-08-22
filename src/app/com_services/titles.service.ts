@@ -9,7 +9,7 @@ export class TitlesService {
   getTitle(id:number) {
     return TITLES.find(title => title.id === id)
   }
-
+  
   constructor() { }
 
 }
@@ -17,10 +17,17 @@ export class TitlesService {
 const TITLES = [
   {
       id: 1,
-      name: 'First Title'
+      name: 'First Title',
+      isActive: true
   },
   {
       id: 2,
-      name: 'Second Title'
+      name: 'Second Title',
+      isActive: true
+  },
+  {
+      id: 3,
+      name: 'Third Title',
+      isActive: false
   }
 ]

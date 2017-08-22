@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { TitleRoutingModule } from './title-routing.module';
 
 import { TitleComponent } from './title.component';
-import { TitleDetailsComponent } from './title-details/title-details.component';
+import { TitleDetailsComponent } from './smd_title_details/title_details.component';
 
-import { TitlesService } from '../services/titles.service';
+import { TitlesService } from '../com_services/titles.service';
+import { RouteActivatorService } from '../com_services/route_activator.service'
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import { TitlesService } from '../services/titles.service';
         TitleDetailsComponent
     ],
     providers: [
-        TitlesService
+        TitlesService,
+        RouteActivatorService
     ],
     exports: [
         TitleComponent
