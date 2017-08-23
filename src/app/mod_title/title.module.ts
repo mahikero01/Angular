@@ -7,6 +7,7 @@ import { TitleDetailsComponent } from './smd_title_details/title_details.compone
 
 import { TitlesService } from '../com_services/titles.service';
 import { RouteActivatorService } from '../com_services/route_activator.service'
+import { TitlesResolverService } from '../com_services/titles-resolver.service'
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import { RouteActivatorService } from '../com_services/route_activator.service'
     ],
     providers: [
         TitlesService,
-        RouteActivatorService
+        RouteActivatorService,
+        TitlesResolverService
     ],
     exports: [
         TitleComponent

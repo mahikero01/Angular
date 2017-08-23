@@ -3,6 +3,7 @@ import {
   OnInit 
 } from '@angular/core';
 import { TitlesService } from '../com_services/titles.service'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-title',
@@ -10,13 +11,22 @@ import { TitlesService } from '../com_services/titles.service'
   styleUrls: ['./title.component.css']
 })
 export class TitleComponent implements OnInit {
-  titles: any[];
+  titles: any;
 
-  constructor(private eventService: TitlesService) { 
+  constructor(
+      private eventService: TitlesService,
+      private activatedRoute: ActivatedRoute) { 
   }
 
   ngOnInit() {
-    this.titles = this.eventService.getTitles();
+    //old style of getting data
+   // this.titles = this.eventService.getTitles();
+
+    //using observables
+    //this.eventService.getTitles().subscribe(titles => {this.titles = titles});
+
+    //using Resolver Service
+    this.titles = this.activatedRoute.snapshot.data['titles'];
   }
 
   

@@ -14,10 +14,10 @@ import { CreateTitleComponent } from './create_title.component';
   ],
   providers:[
     //long hand form
-    {
-      provide:'canDeactivateCreateTitle',
-      useValue: checkDirtyState
-    }
+  //   {
+  //     provide:'canDeactivateCreateTitle',
+  //     useValue: checkDirtyState
+  //   }
   ],
   exports: [
     CreateTitleComponent 
@@ -25,10 +25,10 @@ import { CreateTitleComponent } from './create_title.component';
 })
 export class CreateTitleModule { }
 
-  function checkDirtyState(component:CreateTitleComponent) {
-    if (component.isDirty)
-      return window.confirm('Info not save, are you sure you want to cancell?');
+  // function checkDirtyState(component:CreateTitleComponent) {
+  //   if (component.isDirty)
+  //     return window.confirm('Info not save, are you sure you want to cancell?');
 
-    return true;
-  }
+  //   return true;
+  // }
 

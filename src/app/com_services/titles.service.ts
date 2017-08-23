@@ -1,9 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/RX'
 
 @Injectable()
 export class TitlesService {
   getTitles() {
-    return TITLES
+    //old style of getting data
+    //return TITLES
+
+    //using observables
+    let subject = new Subject();
+    //simulate delay
+    setTimeout(() => {subject.next(TITLES); subject.complete();}, 2000);
+    return subject;
   }
 
   getTitle(id:number) {
