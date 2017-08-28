@@ -6,8 +6,8 @@ import { RouteActivatorService } from '../com_services/route_activator.service'
 import { TitlesResolverService } from '../com_services/titles-resolver.service'
 
 const routes: Routes = [
-    { path: 'title', component: TitleComponent,
-            resolve: {titles: TitlesResolverService} },
+    { path: 'title', component: TitleComponent
+            ,resolve: {titles: TitlesResolverService} },
     // use a service that is define in the provider
     { path: 'title/:id', component: TitleDetailsComponent,
             canActivate: [RouteActivatorService]}

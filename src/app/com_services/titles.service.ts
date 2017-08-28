@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/RX'
+import { 
+  Subject, 
+  Observable 
+} from 'rxjs/RX'
+import { ITitle } from '../com_entities/all.models';
 
 @Injectable()
 export class TitlesService {
-  getTitles() {
+  getTitles():Observable<ITitle[]> {
     //old style of getting data
     //return TITLES
 
     //using observables
-    let subject = new Subject();
+    let subject = new Subject<ITitle[]>();
     //simulate delay
-    setTimeout(() => {subject.next(TITLES); subject.complete();}, 2000);
+    setTimeout(() => {subject.next(TITLES); subject.complete();}, 3000);
     return subject;
   }
 
@@ -22,7 +26,7 @@ export class TitlesService {
 
 }
 
-const TITLES = [
+const TITLES:ITitle[] = [
   {
       id: 1,
       name: 'First Title',
